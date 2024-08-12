@@ -42,3 +42,12 @@ When to Use DFS vs. BFS:
 	•	When you need to explore nodes level by level, such as finding the shortest path in a grid.
 	•	When you want to avoid potential issues with deep recursion in DFS, particularly in languages that don’t handle deep recursion well (like Python, which has a default recursion limit).
 	•	When dealing with very large grids where the worst-case memory usage of DFS could be a concern.
+
+
+
+
+	Youtube Tutorial
+	https://www.youtube.com/watch?v=aahdAQNSlQU
+	https://www.youtube.com/watch?v=LXzaSwRA5RQ
+
+	!!! Codes are in c++/java but since same methodology hai and syntaxt alag to tumhe samajh to aa hi jaega.

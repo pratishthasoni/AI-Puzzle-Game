@@ -1,0 +1,53 @@
+DFS vs. BFS for Counting Islands
+
+1. Memory Usage: (DFS WINS)
+
+	•	DFS
+	        DFS uses a stack (which can be implemented using recursion or explicitly using a stack data structure) to explore nodes. In the worst case, the stack can grow up to the size of the grid’s longest path, which is the maximum depth of the recursive calls. This can lead to high memory usage if the path is long.
+	•	BFS
+	        BFS uses a queue to explore nodes level by level. The queue stores all the nodes at the current level before moving on to the next level. In the worst case, the queue might need to store a large number of nodes, especially if the grid is wide and not very deep.
+	•	Comparison:
+	        
+            ....for this problem, both DFS and BFS tend to have similar memory usage, but DFS might use less memory for typical grid shapes.
+
+
+2. Implementation Simplicity: (DFS WINS)
+
+	•	DFS
+	        DFS can be simpler to implement using recursion, as shown in your code example. It requires fewer lines of code and is often more straightforward to write and understand for problems involving connectivity, like finding islands.
+	•	BFS
+	        BFS requires maintaining a queue explicitly and typically involves more code to handle the enqueue and dequeue operations. It might also need additional checks to ensure that nodes are processed in the correct order.
+	•	Comparison:
+	 	    DFS is generally easier to implement recursively, which can make it more attractive for simpler problems or when rapid prototyping is needed.
+
+
+3. Traversal Characteristics: (BOTH WINS...no effect on performance)
+
+	•	DFS 
+	        DFS dives deep into the grid, following one path as far as it can go before backtracking. This means it can quickly find the extent of an island but may not be as intuitive for finding the shortest path (which isn’t relevant here but is important in other problems).
+	•	BFS
+	        BFS explores all neighbors level by level, which can be more intuitive for finding the shortest path or the smallest island in terms of the number of steps.
+    •	Comparison:
+		    For the island-counting problem, the difference in traversal characteristics doesn’t significantly impact performance or correctness. Both DFS and BFS will correctly count the number of islands.
+
+
+When to Use DFS vs. BFS:
+
+	Use DFS:
+	•	When simplicity and ease of implementation are important.
+	•	When you’re dealing with typical grid shapes where the depth of recursion won’t cause stack overflow issues.
+	•	When memory usage might be lower due to the nature of the grid (e.g., deep but narrow grids).
+
+	Use BFS:
+	•	When you need to explore nodes level by level, such as finding the shortest path in a grid.
+	•	When you want to avoid potential issues with deep recursion in DFS, particularly in languages that don’t handle deep recursion well (like Python, which has a default recursion limit).
+	•	When dealing with very large grids where the worst-case memory usage of DFS could be a concern.
+
+
+
+
+	Youtube Tutorial
+	https://www.youtube.com/watch?v=aahdAQNSlQU
+	https://www.youtube.com/watch?v=LXzaSwRA5RQ
+
+	!!! Codes are in c++/java but since same methodology hai and syntaxt alag to tumhe samajh to aa hi jaega.
